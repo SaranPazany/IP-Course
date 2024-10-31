@@ -4,11 +4,9 @@
       v-for="(banner, index) in banners"
       :key="index"
       :title="banner.title"
-      :description="banner.description"
       :imageSrc="banner.imageSrc"
-      :bgColor="banner.bgColor"
-      :bgBtnColor="banner.bgBtnColor"
-      :label="banner.label" />
+      :color="banner.color"
+      :buttonColor="banner.buttonColor" />
   </div>
 </template>
 <script>
@@ -20,28 +18,25 @@ export default {
       banners: [
         {
           title: "Everyday Fresh & Clean with Our Products",
-          description: "Try it!",
           imageSrc: "./public/images/union.jpg",
-          bgColor: "#F0E8D5",
-          bgBtnColor: "#36b37e",
-          label: "Shop Now",
+          color: "#F0E8D5",
+          buttonColor: "#36b37e",
+          url: "https://www.google.com",
         },
         {
           title: "Make your Breakfast Healthy and Easy",
-          description: "Try it!",
           imageSrc: "./public/images/milk.png",
 
-          bgColor: "#F3E8E8",
-          bgBtnColor: "#36b37e",
-          label: "Shop Now",
+          color: "#F3E8E8",
+          buttonColor: "#36b37e",
+          url: "https://www.google.com",
         },
         {
           title: "The best Organic Products Online",
-          description: "Try it!",
           imageSrc: "./public/images/vegetable.jpg",
-          bgColor: "#E7EAF3",
-          bgBtnColor: "#36b37e",
-          label: "Shop Now",
+          color: "#E7EAF3",
+          buttonColor: "#36b37e",
+          url: "https://www.google.com",
         },
       ],
     };
@@ -54,8 +49,5 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* justify-content: space-around; */
-  /* padding: 20px; */
-  /* background-color: #f0f2f5; */
 }
 </style>

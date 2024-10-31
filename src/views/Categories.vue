@@ -3,10 +3,10 @@
     <Products
       v-for="(product, index) in products"
       :key="index"
-      :title="product.title"
-      :items="product.items"
+      :name="product.name"
+      :productCount="product.productCount"
       :imageSrc="product.imageSrc"
-      :bgColor="product.bgColor" />
+      :color="product.color" />
   </div>
 </template>
 <script>    
@@ -18,66 +18,66 @@ export default {
     return {
       products: [
         {
-          title: "Buger",
-          items: 14,
+          name: "Buger",
+          productCount: 14,
           imageSrc: "./public/images/Hamburger.svg",
-          bgColor: "#F2FCE4",
+          color: "#F2FCE4",
         },
         {
-          title: "Peach",
-          items: 17,
+          name: "Peach",
+          productCount: 17,
           imageSrc: "./public/images/Peach.svg",
-          bgColor: "#FFFCEB",
+          color: "#FFFCEB",
         },
         {
-          title: "Organic Kiwi",
-          items: 21,
+          name: "Organic Kiwi",
+          productCount: 21,
           imageSrc: "./public/images/Kiwi.svg",
-          bgColor: "#ECFFEC",
+          color: "#ECFFEC",
         },
         {
-          title: "Red Apple",
-          items: 25,
+          name: "Red Apple",
+          productCount: 25,
           imageSrc: "./public/images/RedApple.svg",
-          bgColor: "#FEEFEA",
+          color: "#FEEFEA",
         },
         {
-          title: "Snack",
-          items: 34,
+          name: "Snack",
+          productCount: 34,
           imageSrc: "./public/images/snacks.svg",
-          bgColor: "#FFF3EB",
+          color: "#FFF3EB",
         },
         {
-          title: "Black Ples",
-          items: 63,
+          name: "Black Ples",
+          productCount: 63,
           imageSrc: "./public/images/BlackPulm.svg",
-          bgColor: "#FFF3FF",
+          color: "#FFF3FF",
         },
         {
-          title: "Vegetabe",
-          items: 53,
+          name: "Vegetabe",
+          productCount: 53,
           imageSrc: "./public/images/Vegetables.svg",
-          bgColor: "#F2FCE4",
+          color: "#F2FCE4",
         },
         {
-          title: "Headphone",
-          items: 25,
+          name: "Headphone",
+          productCount: 25,
           imageSrc: "./public/images/HeadPhone.svg",
-          bgColor: "#FFFCEB",
+          color: "#FFFCEB",
         },
       
         {
-          title: "Cake and Milk",
-          items: 53,
+          name: "Cake and Milk",
+          productCount: 53,
           imageSrc: "./public/images/CakeAndMilk.svg",
-          bgColor: "#F2FCE4",
+          color: "#F2FCE4",
         },
 
         {
-          title: "Orange",
-          items: 63,
+          name: "Orange",
+          productCount: 63,
           imageSrc: "./public/images/Orange.svg",
-          bgColor: "#FFF3FF",
+          color: "#FFF3FF",
         },
       ],
     };
@@ -87,6 +87,7 @@ export default {
 <style scoped>
 .product-list {
   display: flex;
+  
   flex-wrap: wrap;
   width: 100vw;
  

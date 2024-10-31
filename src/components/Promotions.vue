@@ -1,10 +1,9 @@
 <template>
-  <div :style="{ backgroundColor: bgColor }" class="promotion-banner">
+  <div :style="{ backgroundColor: color }" class="promotion-banner">
     <div class = "Banner-content">
       <h2>{{ title }}</h2>
       
-
-<Button :bg-btn-color="bgBtnColor" :label = "label"/>
+<Button :bg-btn-color="buttonColor" :message="title" />
     </div>
     <div class="bannerImg">
       <img :src="imageSrc" :alt="title" class="banner-image" />
@@ -22,11 +21,10 @@ export default {
   },
   props: {
     title: String,
-    // description: String,
     imageSrc: String,
-    bgColor: String,
-    bgBtnColor: String,
-    label: String,
+    color: String,
+    buttonColor: String,
+    url: String,
   },
   method: {
     shopNow() {
@@ -60,7 +58,6 @@ export default {
 
 
 .bannerImg {
-  /* width: 300px; */
   height:300px;
   display:flex;
   align-items: end;
@@ -69,7 +66,6 @@ export default {
 
   width: 190px;
   height: 190px;
-  /* object-fit: cover; */
   margin-right: 20px;
 }
 .banner-content {
@@ -82,10 +78,9 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
- justify-items: center;
+  justify-items: center;
   padding: 8px 16px;
   color: white;
-  /* background-color: #36b37e; */
   border: none;
   border-radius: 4px;
   cursor: pointer;

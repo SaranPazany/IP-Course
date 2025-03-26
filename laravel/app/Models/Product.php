@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
 
     protected $table = "product";
-    protected $fillable = ['name', 'pricing', 'category_id', 'description', 'images'];
+    protected $fillable = ['name', 'price', 'category_id', 'description', 'images'];
 
     public static function getAllProducts()
     {
@@ -113,8 +113,8 @@ class Product extends Model
     // Chunk processing of large datasets
     public static function chunkProducts($size, $callback)
     {
-        self::chunk($size, function (Collection $products) use ($callback) {
-            $callback($products);
+        self::chunk($size, function (Collection $product) use ($callback) {
+            $callback($product);
         });
     }
 

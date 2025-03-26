@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->bigInteger('category_id')->unsigned();
-            $table->double('pricing');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade'); // Cascades deletion of products when a category is deleted
+            $table->double('price'); // Renamed from 'pricing' to 'price' for consistency
             $table->text('description')->nullable();
-            $table->jsonb('images')->nullable(); 
+            $table->jsonb('images')->nullable(); // Storing images as JSON (ensure correct usage)
             $table->timestamps();
-            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
-    /**php
+    /**
      * Reverse the migrations.
      */
     public function down(): void

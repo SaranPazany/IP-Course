@@ -157,7 +157,7 @@ class AllFeatureTests extends TestCase
             'total_price' => 175.50
         ]);
     }
-
+    
     /**
      * Test #6: Cart Item Addition
      * Description: Test if we can add an item to the cart

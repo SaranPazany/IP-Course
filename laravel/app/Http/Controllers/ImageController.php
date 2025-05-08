@@ -19,6 +19,7 @@ class ImageController extends Controller
 
     // Upload the original image to MinIO
     $originalPath = Storage::disk('minio')->putFileAs('uploads', $image, $fileName);
+    $originalPath = Storage::disk('minio')->putFileAs('thumbnails', $image, $fileName);
 
     // Create thumbnail and save locally (or to MinIO if desired)
     $thumbnailPath = 'thumbnails/' . $fileName;
